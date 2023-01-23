@@ -8,6 +8,8 @@
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "docker:kafka-up": "docker-compose -f docker/kafka.yml up && docker-compose -f docker/kafka-drop-ui.yml up",
+    "docker:kafka-down": "docker-compose -f docker/kafka.yml down && docker-compose -f docker/kafka-drop-ui.yml down",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
